@@ -1,26 +1,29 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from 'react'
+import './App.css'
 import Randalph from './randalph.js'
 
 const randalph = new Randalph()
 
 class App extends Component {
+  constructor (props) {
+    super(props)
+    this.state = { char: randalph.getChar() }
+    this.handleClick = this.handleClick.bind(this);
+  }
+
   handleClick () {
-    console.log(randalph.getChar())
+    this.setState(prevState => ({
+      char: randalph.getChar()
+    }))
   }
 
   render () {
+    console.log(this.state)
     return (
       <div className="App">
         <div className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h2>Welcome to React</h2>
-          <button onClick={this.handleClick}>Click Me</button>
+          <h1 onClick={this.handleClick} className="randy">{this.state.char}</h1>          
         </div>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
       </div>
     );
   }

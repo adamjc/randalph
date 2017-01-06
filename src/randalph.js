@@ -8,7 +8,7 @@ function Randalph () {
   function getChar () {
     let randomIndex = Math.random() * alphabet.length
 
-    return alphabet.splice(randomIndex, 1)
+    return alphabet.splice(randomIndex, 1).toString()
   }
 
   return {
