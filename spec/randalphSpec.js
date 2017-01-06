@@ -1,4 +1,4 @@
-const Randalph = require('../lib/randalph')
+const Randalph = require('../src/randalph.js') 
 
 describe('randalph', () => {
   it('picks a random letter', () => {
