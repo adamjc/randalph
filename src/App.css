@@ -1,16 +1,26 @@
-.body {
-  background-color: #eee
+body {
+  height: 100vh;
+  background-color: #eee;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.randy {  
+h1 {
+  margin: 0;
+}
+
+.App {
+
+}
+
+.randy {
   color: #333;
   font-size: 10em;
   cursor: pointer;
 }
 
-.App {
-  text-align: center;
-}
+
 
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
