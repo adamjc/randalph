@@ -4,25 +4,15 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  user-select: none;
 }
 
 h1 {
   margin: 0;
 }
 
-.App {
-
-}
-
 .randy {
   color: #333;
   font-size: 10em;
   cursor: pointer;
-}
-
-
-
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
 }
