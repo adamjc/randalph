@@ -12,7 +12,7 @@ class App extends Component {
   }
 
   handleClick () {
-    this.setState(prevState => ({
+    this.setState(_ => ({
       char: randalph.getChar()
     }))
   }
