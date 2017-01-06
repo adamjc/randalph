@@ -18,11 +18,10 @@ class App extends Component {
   }
 
   render () {
-    console.log(this.state)
     return (
       <div className="App">
         <div className="App-header">
-          <h1 onClick={this.handleClick} className="randy">{this.state.char}</h1>          
+          <h1 onClick={this.handleClick} className="randy">{this.state.char}</h1>
         </div>
       </div>
     );
