@@ -12,8 +12,14 @@ class App extends Component {
   }
 
   handleClick () {
+    let char = randalph.getChar()
+
+    if (char === '') {
+      char = 'end'
+    }
+
     this.setState(_ => ({
-      char: randalph.getChar()
+      char: char
     }))
   }
 
