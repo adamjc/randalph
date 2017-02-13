@@ -1,18 +1,27 @@
 function Randalph () {
-  let alphabet = [
-    'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I',
-    'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R',
-    'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'
-  ]
+  let alphabet = getAlphabet()
 
   function getChar () {
-    let randomIndex = Math.random() * alphabet.length
+    const randomIndex = Math.random() * alphabet.length
 
     return alphabet.splice(randomIndex, 1).toString()
   }
 
+  function reset () {
+    alphabet = getAlphabet()
+  }
+
+  function getAlphabet () {
+    return [
+      'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I',
+      'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R',
+      'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'
+    ]
+  }
+
   return {
-    getChar: getChar
+    getChar: getChar,
+    reset: reset
   }
 }
 

@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import './App.css'
 import Randalph from './randalph.js'
+import fontcss from './font-awesome.min.css'
 
 const randalph = new Randalph()
 
