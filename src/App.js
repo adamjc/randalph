@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import './App.css'
 import Randalph from './randalph.js'
-import fontcss from './font-awesome.min.css'
 
 const randalph = new Randalph()
 
@@ -16,7 +15,7 @@ class App extends Component {
     let char = randalph.getChar()
 
     if (char === '') {
-      char = 'end'
+      char = <i className="fa fa-repeat" aria-hidden="true"></i>
     }
 
     this.setState(_ => ({
