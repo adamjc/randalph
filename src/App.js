@@ -16,6 +16,7 @@ class App extends Component {
 
     if (char === '') {
       char = <i className="fa fa-repeat" aria-hidden="true"></i>
+      randalph.reset()
     }
 
     this.setState(_ => ({
