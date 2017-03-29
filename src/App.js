@@ -5,10 +5,24 @@ import Randalph from './randalph.js'
 const randalph = new Randalph()
 
 class App extends Component {
+  componentDidMount () {
+    window.addEventListener('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', this.handleAnim);
+  }
+
   constructor (props) {
     super(props)
-    this.state = { char: randalph.getChar() }
+    this.state = {
+      char: randalph.getChar(),
+      class: "randy animated"
+    }
     this.handleClick = this.handleClick.bind(this);
+    this.handleAnim = this.handleAnim.bind(this);
+  }
+
+  handleAnim () {
+    this.setState(_ => ({
+      class: "randy animated"
+    }))
   }
 
   handleClick () {
@@ -20,6 +34,7 @@ class App extends Component {
     }
 
     this.setState(_ => ({
+      class: "randy animated pulse",
       char: char
     }))
   }
@@ -28,7 +43,7 @@ class App extends Component {
     return (
       <div className="App">
         <div className="App-header">
-          <h1 onClick={this.handleClick} className="randy">{this.state.char}</h1>
+          <h1 onClick={this.handleClick} onAnimationEnd={this.handleAnim} className={this.state.class}>{this.state.char}</h1>
         </div>
       </div>
     );
