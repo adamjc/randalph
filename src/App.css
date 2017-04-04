@@ -1,5 +1,4 @@
 body {
-  font-family: 'Ubuntu Mono', monospace;
   height: 100vh;
   background-color: #eee;
   display: flex;
@@ -13,8 +12,8 @@ h1 {
 }
 
 .container {
-  height: 250px;
-  width: 250px;
+  height: 225px;
+  width: 225px;
 }
 
 svg {
@@ -31,7 +30,8 @@ svg {
 }
 
 .randy {
-  line-height: 250px;
+  font-family: 'Roboto Mono', monospace;
+  line-height: 220px;
   -webkit-tap-highlight-color: transparent;
   user-select: none;
   height: 100%;
