@@ -9,7 +9,7 @@ class App extends Component {
     super(props)
     this.state = {
       radius: 110,
-      char: randalph.getChar(),
+      char: <i className="fa fa-play" aria-hidden="true" style={{paddingLeft: "24px"}}></i>,
       class: "randy animated"
     }
     this.handleClick = this.handleClick.bind(this)
