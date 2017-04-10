@@ -45,7 +45,7 @@ class App extends Component {
 
       if (currentLength >= circumference) {
         clearInterval(intervalId)
-        timeUp()
+        this.timeUp()
       }
 
       lastTime = new Date().getTime()
