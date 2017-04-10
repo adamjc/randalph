@@ -45,6 +45,7 @@ class App extends Component {
 
       if (currentLength >= circumference) {
         clearInterval(intervalId)
+        timeUp()
       }
 
       lastTime = new Date().getTime()
@@ -53,6 +54,10 @@ class App extends Component {
     this.setState(_ => ({
       intervalId: intervalId
     }))
+  }
+
+  timeUp () {
+    navigator.vibrate(1000)
   }
 
   handleClick () {
