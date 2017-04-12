@@ -1,6 +1,6 @@
 body {
   height: 100vh;
-  background-color: #eee;
+  background-color: #333;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -25,7 +25,7 @@ svg {
   position: absolute;
   top: 0;
   fill: transparent;
-  stroke: #333;
+  stroke: #eee;
   stroke-width: 2;
 }
 
@@ -37,7 +37,7 @@ svg {
   height: 100%;
   width: 100%;
   text-align: center;
-  color: #333;
+  color: #eee;
   font-size: 10em;
   cursor: pointer;
 }
