@@ -10,10 +10,12 @@ class App extends Component {
     this.state = {
       radius: 110,
       char: <i className="fa fa-play" aria-hidden="true" style={{paddingLeft: "24px"}}></i>,
-      class: "randy animated"
+      class: "randy animated",
+      appClass: "App"
     }
     this.handleClick = this.handleClick.bind(this)
     this.handleTextAnim = this.handleTextAnim.bind(this)
+    this.handleFlashAnim = this.handleFlashAnim.bind(this)
   }
 
   handleTextAnim () {
@@ -44,6 +46,9 @@ class App extends Component {
       currentLength += increment * dT
 
       if (currentLength >= circumference) {
+        this.setState(_ => ({
+          appClass: "App anim"
+        }))
         clearInterval(intervalId)
         this.timeUp()
       }
@@ -80,9 +85,15 @@ class App extends Component {
     }))
   }
 
+  handleFlashAnim () {
+    this.setState(_ => ({
+      appClass: "App"
+    }))
+  }
+
   render () {
     return (
-      <div className="App">
+      <div className={this.state.appClass} onAnimationEnd={this.handleFlashAnim}>
         <div className="container">
           <svg width="225" height="225">
             <circle id="circle" transform="rotate(-90, 112.5, 112.5)" className="circle" cx="112.5" cy="112.5" r={this.state.radius} style={{strokeDasharray: this.state.stroke}}/>
