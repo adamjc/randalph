@@ -29,7 +29,7 @@ class App extends Component {
 
     const radius = this.state.radius
     const circumference = 2 * Math.PI * radius
-    const timeLimit = 60 // in seconds
+    const timeLimit = 5 // in seconds
     const increment = circumference / timeLimit
 
     let currentLength = 0
@@ -62,6 +62,8 @@ class App extends Component {
   }
 
   timeUp () {
+    const audio = new Audio('time-up.mp3')
+    audio.play()
     navigator.vibrate(1000)
   }
 
